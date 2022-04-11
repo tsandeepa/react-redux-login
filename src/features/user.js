@@ -6,13 +6,15 @@ export const userSlice = createSlice({
     initialState:{value:{
         name:"Tharindu",
         age:0,
-        email:""
+        email:"tharindu@email.com"
     }},
-    reducer:{
+    reducers:{
         login:(state, action)=>{
-            state.value = action.payload
+            state.value = action.payload;
         },
     }
 })
+
+export const { login } = userSlice.actions;
 
 export default userSlice.reducer;
